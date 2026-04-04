@@ -1,0 +1,58 @@
+{
+  "name": "mdshare-live",
+  "displayName": "mdshare - Share Markdown",
+  "description": "Share markdown files instantly via mdshare.live",
+  "version": "0.2.0",
+  "publisher": "urbanmorph",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "markdown",
+    "share",
+    "mdshare"
+  ],
+    "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "mdshare.shareFile",
+        "title": "Share on mdshare"
+      },
+      {
+        "command": "mdshare.shareSelection",
+        "title": "Share Selection on mdshare"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "mdshare.shareFile",
+          "when": "resourceLangId == markdown",
+          "group": "mdshare"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "mdshare.shareSelection",
+          "when": "editorHasSelection",
+          "group": "mdshare"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^3.0.0",
+    "typescript": "^5.3.0"
+  }
+}
