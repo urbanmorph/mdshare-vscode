@@ -2,7 +2,7 @@
   "name": "mdshare-live",
   "displayName": "mdshare - Share Markdown",
   "description": "Share markdown files instantly via mdshare.live",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "publisher": "urbanmorph",
   "license": "MIT",
   "engines": {
@@ -25,7 +25,10 @@
     "url": "https://github.com/urbanmorph/mdshare-vscode/issues"
   },
   "icon": "icon.png",
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:mdshare.shareFile",
+    "onCommand:mdshare.shareSelection"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -43,14 +46,21 @@
         {
           "command": "mdshare.shareFile",
           "when": "resourceLangId == markdown",
-          "group": "mdshare"
+          "group": "navigation@100"
         }
       ],
       "editor/context": [
         {
           "command": "mdshare.shareSelection",
           "when": "editorHasSelection",
-          "group": "mdshare"
+          "group": "navigation@100"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "mdshare.shareFile",
+          "when": "resourceLangId == markdown",
+          "group": "navigation"
         }
       ]
     }

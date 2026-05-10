@@ -6,6 +6,7 @@ Share markdown files instantly via [mdshare.live](https://mdshare.live). No logi
 
 - **Share a file**: Right-click any `.md` file in the Explorer and select "Share on mdshare"
 - **Share a selection**: Select text in any editor, right-click, and select "Share Selection on mdshare"
+- **Share from the editor toolbar**: One-click share button in the top-right of any open markdown file
 
 The admin URL is automatically copied to your clipboard. Share it with anyone — they can view and collaborate on the document.
 
