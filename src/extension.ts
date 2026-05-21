@@ -1,11 +1,15 @@
 import * as vscode from "vscode";
 
 const API_URL = "https://mdshare.live/api/documents";
+const VERSION = "0.3.4";
 
 async function upload(content: string): Promise<string> {
   const res = await fetch(API_URL, {
     method: "POST",
-    headers: { "Content-Type": "text/plain" },
+    headers: {
+      "Content-Type": "text/plain",
+      "User-Agent": `mdshare-vscode/${VERSION}`,
+    },
     body: content,
   });
   if (!res.ok) {

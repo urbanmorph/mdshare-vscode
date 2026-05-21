@@ -2,7 +2,7 @@
   "name": "mdshare-live",
   "displayName": "mdshare - Share Markdown",
   "description": "Share markdown files instantly via mdshare.live",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "publisher": "urbanmorph",
   "license": "MIT",
   "engines": {

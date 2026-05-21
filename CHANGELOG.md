@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.4 (2026-05-21)
+
+- Send a `User-Agent: mdshare-vscode/<version>` header on upload requests so
+  the backend can attribute traffic to this integration. No personal
+  identifiers — the header carries only the client software name and version.
+
 ## 0.3.3 (2026-05-20)
 
 - Republish at a fresh version. No functional changes.
